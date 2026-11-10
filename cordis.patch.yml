@@ -1,0 +1,6 @@
+# dsh-quick-restart bundle patch: mount the host half (restart route) under its
+# package name, resolved through the profile's node_modules. The client half is
+# collected separately from package.json `dsh.client`.
+- insert:
+    - id: dsh-quick-restart
+      name: dsh-quick-restart

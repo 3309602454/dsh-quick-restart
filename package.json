@@ -1,0 +1,51 @@
+{
+  "name": "dsh-quick-restart",
+  "version": "0.1.0",
+  "description": "One-click restart button in the DSH conversation header: it warns about running work, then closes and relaunches the desktop app without opening a console window.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "restart",
+    "relaunch",
+    "desktop"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3309602454/dsh-quick-restart.git"
+  },
+  "homepage": "https://github.com/3309602454/dsh-quick-restart",
+  "bugs": {
+    "url": "https://github.com/3309602454/dsh-quick-restart/issues"
+  },
+  "license": "MIT"
+}
